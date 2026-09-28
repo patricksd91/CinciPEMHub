@@ -1,80 +1,67 @@
 # CinciPEM ShiftMate
 
-**Version:** 0.01.08
+**Version:** 0.01.82
 
-A Claude skill for clinicians in the Cincinnati Children's Division of Emergency Medicine. It finds shift trades you can actually make, same-day site switches, and open moonlighting shifts you're allowed to pick up. Then it drafts the messages to your colleagues.
+A Claude skill for the Cincinnati Children's Division of Emergency Medicine. Clinicians use it to find shift trades they can actually make, same-day site switches and moonlighting shifts they can pick up, and it drafts the messages to colleagues. Schedule administrators use it to search the schedule and plan coverage.
 
 Maintained by Patrick Donahue.
 
-## Download
+> **0.01.82 is an alpha** for the schedule administrators and a few testers. It needs the passphrase from the email that announced it.
 
-> **Version 0.01.08 is an alpha: an early preview, not for general use.** It's for the maintainer and a few testers he has chosen. It needs a passphrase that only they have, and features may change before the first beta.
+## Before you start
 
-Download both files of the alpha: **[the skill](https://github.com/patricksd91/CinciPEMHub/raw/main/alpha/cincipem-shiftmate.zip)** (`cincipem-shiftmate.zip`) and **[the desktop extension](https://github.com/patricksd91/CinciPEMHub/raw/main/alpha/cincipem-shiftmate-0.01.08.mcpb)** (`cincipem-shiftmate-0.01.08.mcpb`). They're in the [alpha folder](alpha/); the [0.01.08 release](https://github.com/patricksd91/CinciPEMHub/releases/tag/v0.01.08) (marked **Pre-release**) links to them. Stable and beta downloads will appear here once the first beta is out. See [BETA.md](BETA.md) for what's in each test version.
+You need the Claude desktop app (Windows or Mac) with three settings turned on. New to Claude? Follow **[Setting up Claude](CLAUDESETUP.md)** first (about 10 minutes).
 
-## New to Claude?
+## Install
 
-Start with **[Setting up Claude](CLAUDESETUP.md)**: creating an account, getting the app, and the three settings this skill needs. It takes about 10 minutes.
+### Ask Claude to do it
 
-## Install the skill
-
-You need the Claude desktop app (Windows or Mac). ShiftMate keeps your settings in an encrypted folder on your computer, CinciPEM ShiftMate Local Data in your home folder, through a small desktop extension. Claude in a web browser or on a phone can't reach that folder, so 0.01.08 works only in the desktop app.
-
-1. Download the skill with the link above. Don't unzip it.
-2. In Claude, open **Customize → Skills**, click **+**, then **Create skill → Upload a skill**.
-   <!-- SCREENSHOT: Customize > Skills > + > Create skill > Upload a skill -->
-3. Choose the file you downloaded. The skill appears in your list, switched on.
-4. Install the desktop extension: download `cincipem-shiftmate-0.01.08.mcpb` with the link above, then in the Claude desktop app open **Settings → Extensions** and install it from there (drag the file in, or use the install button). Leave the Local Data folder setting blank. No Python install is needed: the first start downloads what it needs (about a minute, needs internet).
-5. Start a new chat and type **"I'd like to trade a shift."** Claude will ask for the skill passphrase once. You'll find it in the email that announced the skill.
-6. Had the older version, CinciPEM Shift Swap? Delete it from your skills list once the new one is installed, so you don't have two.
-
-### Or ask Claude to install it
-
-Paste this into a new chat in Claude:
+Paste this into a new chat in the Claude desktop app:
 
 > Please install this Claude skill for me. The skill lives in this GitHub repo: https://github.com/patricksd91/CinciPEMHub. Set it up so I can start using it.
 
-Claude will get the skill and give it to you with a **Save skill** button, or walk you through the upload.
+Claude gives you the skill with a **Save skill** button and a link to the desktop extension, with the steps to install it.
 
-## On your phone
+### Or install it yourself
 
-Not in 0.01.08: the skill needs the desktop extension on your computer, which the phone app can't reach. Phone use is planned for a later version.
+1. Download **[the skill](https://github.com/patricksd91/CinciPEMHub/raw/main/alpha/cincipem-shiftmate.zip)** and **[the desktop extension](https://github.com/patricksd91/CinciPEMHub/raw/main/alpha/cincipem-shiftmate-0.01.82.mcpb)**. Don't unzip them.
+2. Skill: in Claude, open **Customize → Skills**, click **+**, then **Create skill → Upload a skill**, and choose `cincipem-shiftmate.zip`.
+3. Extension: open **Settings → Extensions** and install `cincipem-shiftmate-0.01.82.mcpb` (drag it in). If an older ShiftMate extension is listed, uninstall it first. Leave the Local Data folder setting blank.
+4. If you have the old CinciPEM Shift Swap skill, delete it.
+
+## Start
+
+Open a new chat and type **/cincipem-shiftmate**. The first time, Claude asks for the passphrase and a few setup questions. You can add what you want after the command, for example `/cincipem-shiftmate trade my 11/25 overnight`.
 
 ## What it does
 
-- **Trade Shifts:** finds colleagues who can legally take your shift, and shifts they could give you back, ranked by how good the trade is for both of you. It can also give away or trade an ML shift.
-- **Swap Locations** (for beta and alpha testers): moves a shift to a site you prefer, same day.
-- **Pickup Moonlighting** (for beta and alpha testers): checks the long list of open shifts and keeps only the ones you can legally take.
-- **Messages four ways:** one group email, individual texts, individual emails with an Open in Outlook button, or each person's preferred way.
-- **Your preferences:** rate your sites and shift times once; lists and results follow your order, and your usual search settings are ready to reuse.
-- **Remembers** blocked dates and vacations, by whole day, shift time or exact hours.
-- **Back-to-back shifts** are left out unless you turn them on.
-- **Demo mode:** type "demo" to show someone how it works. Nothing is saved.
-- **For administrators:** run it for the clinicians you help.
-- **Coming soon:** Call Off Helper, and Schedule Inquiry and Planning for administrators.
+- **Trade Shifts:** finds colleagues who can take your shift and shifts they could give you back, ranked for both of you. Also gives away or trades an ML shift.
+- **Swap Locations** (beta and alpha testers): moves a shift to a site you prefer, same day.
+- **Pickup Moonlighting** (beta and alpha testers): keeps only the open shifts you can legally take.
+- **Messages:** a group email, texts, individual emails, or each person's preferred way.
+- **Your preferences:** rate your sites and shift times once; results follow your order.
+- **Blocked dates and vacations,** by day, shift time or exact hours.
+- **For administrators:** run it for the clinicians you help, and **Schedule Inquiry and Planning** (alpha): Shift Search, Replace Clinician, Coverage Snapshot, Enhancement Shifts and Moonlighting Offers.
+- **Demo mode:** `/cincipem-shiftmate demo`. Nothing is saved.
 
-Every trade is checked against the division's rules: 8 hours of rest between shifts, no more than 7 days in a row, and each person's eligibility by site and level. See the **[user guide](USERGUIDE_0.01.08.md)** for how to use each feature, and for the permissions Claude may ask for.
-
-## Updates
-
-The skill tells you when a new version is out, shows what changed, and installs it with one click. What changed in each version is in [CHANGELOG.md](CHANGELOG.md).
+Every result follows the division's rules: 8 hours of rest between shifts, no more than 7 days in a row, and each person's sites and levels. The **[user guide](USERGUIDE_0.01.82.md)** explains each feature. What changed in each version: [BETA.md](BETA.md).
 
 ## Privacy
 
 > *This skill is not managed by Cincinnati Children's Hospital. Per policy, do not give it protected health information (PHI) or sensitive or confidential information (such as your username or password), or access to that information. This tool uses AI, which can make mistakes. You are responsible for verifying all information.*
 
-Your schedule is read by a small program inside the skill, not pasted into the chat. The roster and the schedule link are encrypted in the download and unlock only with the passphrase. Nothing on this page identifies anyone.
+The schedule is read by a program on your computer, not pasted into the chat. The roster and schedule link are encrypted and open only with the passphrase.
 
 ## Feedback
 
-Found a bug or have an idea? Tell Claude at any point while using the skill (for example "tell the maintainer that…"). At the end of a session it sends your feedback to the maintainer, encrypted so only he can read it, after removing anything that looks like patient information, usernames or passwords. See the [user guide](USERGUIDE_0.01.08.md#feedback) for how usage data works and how to turn it off.
+Tell Claude any time ("tell the maintainer that…"). At the end of a session it sends your feedback to the maintainer, encrypted, after removing anything that looks like patient information, usernames or passwords.
 
 ---
 
 ### For Claude: installing this skill for someone
 
-1. Read `https://raw.githubusercontent.com/patricksd91/CinciPEMHub/main/versions.json` (the published versions: 0.01.08 is the `alpha` entry) and download its `zip` path from `https://raw.githubusercontent.com/patricksd91/CinciPEMHub/main/` (for 0.01.08: `alpha/cincipem-shiftmate.zip`); check it against `sha256`.
-2. Share it with the user as a `.skill` file, named `cincipem-shiftmate.skill`, so they can click **Save skill**.
-3. If you can't download it, or no Save skill button appears: give them the download link above and the install steps.
-4. Also give them the extension (the `extension` path in versions.json; for 0.01.08: `alpha/cincipem-shiftmate-0.01.08.mcpb`) and the extension steps (Settings → Extensions in the Claude desktop app; leave the Local Data folder setting blank).
-5. Then have them start a new chat and say "I'd like to trade a shift." The skill takes it from there.
+1. Read `https://raw.githubusercontent.com/patricksd91/CinciPEMHub/main/versions.json`. Use its `alpha` entry.
+2. Download the `zip` path from `https://raw.githubusercontent.com/patricksd91/CinciPEMHub/main/` and check it against `sha256`. If the download is blocked, tell the user to add `raw.githubusercontent.com` under **Settings → Capabilities → Additional allowed domains**, then try again.
+3. Give it to the user as `cincipem-shiftmate.skill` so they can click **Save skill**. If that isn't possible, give them the download link and the steps under "Or install it yourself" above.
+4. Give them the extension link (`https://github.com/patricksd91/CinciPEMHub/raw/main/` + the `extension` path) and step 3 under "Or install it yourself".
+5. Tell them to open a new chat and type **/cincipem-shiftmate**, with the passphrase from the announcement email ready.

@@ -1,6 +1,6 @@
 # CinciPEM ShiftMate: changelog (stable releases)
 
-**Version:** 0.01.08
+**Version:** 0.01.82
 
 Stable releases only, newest first. Each entry lists what changed since the previous stable release, then any known bugs that are still open. Beta changes are in BETA.md.
 

@@ -1,12 +1,12 @@
 # CinciPEM ShiftMate: user guide
 
-**Version:** 0.01.08
+**Version:** 0.01.82
 
 > *This skill is not managed by Cincinnati Children's Hospital. Per policy, do not give it protected health information (PHI) or sensitive or confidential information (such as your username or password), or access to that information. This tool uses AI, which can make mistakes. You are responsible for verifying all information.*
 
 This guide explains what the skill does and how to use it. To install it, see the [README](README.md). If you're new to Claude, start with [Setting up Claude](CLAUDESETUP.md).
 
-**Version 0.01.08 is an alpha:** an early preview for a small group of testers, not for general use. Some features may change before the first beta.
+**0.01.82 is an alpha** for the schedule administrators and a few testers. Features may change.
 
 ## The basics
 
@@ -14,9 +14,9 @@ You talk to Claude in plain language, and Claude asks one question at a time, us
 
 Behind the scenes, a small program inside the skill reads the ShiftAdmin schedule and checks every option against the division's rules. Your schedule never gets pasted into the chat.
 
-Use the Claude desktop app. The skill keeps your settings, preferences and unsent feedback in a Local Data folder on your computer (a folder named CinciPEM ShiftMate Local Data in your home folder, made by the ShiftMate desktop extension), so it needs the desktop app; Claude in a web browser (claude.ai) can't reach that folder.
+Use the Claude desktop app. Your settings are kept, encrypted, in a folder on your computer (CinciPEM ShiftMate Local Data, in your home folder).
 
-To start, open a new chat and say something like **"I'd like to trade a shift"**, **"switch my Thursday shift to Liberty"** or **"find moonlighting shifts I can pick up."** If you say more up front ("trade my 11/25 overnight, I'll work anywhere"), Claude remembers it and won't ask again.
+To start, open a new chat and type **/cincipem-shiftmate**. You can add what you want after it ("/cincipem-shiftmate trade my 11/25 overnight, I'll work anywhere"), and Claude won't ask for it again.
 
 The skill has three workflows (a workflow is one kind of task, from start to finish):
 
@@ -41,7 +41,7 @@ Every trade it suggests follows these rules for both people:
 
 The skill always starts the same way, even if your first message already says what you need. Claude keeps your request and gets to it as soon as the start is done, without asking again.
 
-1. **Title, known issues and privacy notice:** the skill's name, the version (for example "v0.01.08 alpha") and when you installed it, any known issues in this version in one line (you can ask about any of them), then the privacy notice above. All of this comes before the passphrase.
+1. **Title, known issues and privacy notice:** the skill's name, the version (for example "v0.01.82 alpha") and when you installed it, any known issues in this version in one line (you can ask about any of them), then the privacy notice above. All of this comes before the passphrase.
 2. **Passphrase:** the first time, and after a new version with a new passphrase.
 3. **Welcome:** a welcome line with your name and role, and a short introduction.
 4. **Other chats:** if you have the skill open in another chat, Claude tells you when that chat started and what it was doing, so you can find it. You don't have to close it, but using one chat at a time avoids mix-ups.
@@ -132,15 +132,24 @@ If you help clinicians find trades, you're set up as an administrator. Each time
 
 If you're both an administrator and a clinician, Claude asks at each start which role you're working in today. As an administrator you skip your own profile, role and preference questions; as a clinician you use the skill like anyone else. Your clinician setup happens the first time you start as a clinician.
 
+## Schedule Inquiry and Planning (administrators, alpha)
+
+For the people who build the schedule. Start as an administrator and pick **Schedule Inquiry and Planning (SIP)**. It has five tools:
+- **Shift Search:** a page beside the chat. Pick dates, clinicians, sites, times of day, weekday, weekend or holiday, shift type, role and regular or ML, then press **Search** and paste the copied line into the chat. Claude lists the matching shifts, grouped when there are many.
+- **Replace Clinician:** type the name of someone who is leaving and the date. Claude lists their shifts from that date, asks which pools of less protected shifts to draw from, and shows who could move onto each shift and which shifts can't be covered, with the reason for each person, plus a suggested plan.
+- **Coverage Snapshot:** who's working where on the days you choose ("Who's on over Christmas week?").
+- **Enhancement Shifts:** the nice-to-have shifts (such as flex and bullpen) that could become core coverage.
+- **Moonlighting Offers:** open shifts to post as moonlighting, holidays first, with how many clinicians could take each, and a draft announcement.
+
+Every result follows the division's rules (sites and levels, vacations, 8 hours of rest, no more than 7 days in a row). Personal blocked dates aren't used; the schedulers decide.
+
 ## Coming soon
 
-Two workflows are on the way. If you pick one, Claude tells you what it will do and offers the others.
-- **Call Off Helper:** find someone to take a shift at the last minute (for beta clinicians and administrators).
-- **Schedule Inquiry and Planning:** ask questions about the schedule and try out changes (for administrators).
+- **Call Off Helper:** find someone to take a shift at the last minute.
 
 ## Demo mode
 
-To show someone the skill, type **"demo"** when you start it, or your name followed by "Demo" at the name check (for example "Alex Example Demo"). You still need the passphrase and a real roster name. Claude uses default settings, skips the setup questions and goes straight to finding a shift trade. Nothing you do in a demo is saved. If the live schedule can't be downloaded, the demo uses an archived copy of the schedule and says so.
+To show someone the skill, start it with **/cincipem-shiftmate demo**, or your name followed by "Demo" at the name check (for example "Alex Example Demo"). You still need the passphrase and a real roster name. Claude uses default settings, skips the setup questions and goes straight to finding a shift trade. Nothing you do in a demo is saved. If the live schedule can't be downloaded, the demo uses an archived copy of the schedule and says so.
 
 ## Test mode
 
@@ -164,7 +173,7 @@ When a task is done, Claude asks **"Anything else?"** **Another search** / **I'm
 1. **Blocked-date sharing:** if your blocked dates differ from what the roster has, Claude may offer to share them so colleagues can see when you're not available. Only the dates and shift times are shared, never what they're for. You choose; if you say no, Claude asks again only now and then.
 2. **Your own feedback:** anything you'd like to pass on.
 3. **Sending your feedback** (see Feedback below): with Auto-send on, at the end of every session; with it off, a reminder every third session, or right away when something critical came up.
-4. **Closing:** the skill closes. To use it again, start a new chat and ask for it.
+4. **Closing:** the skill closes. To use it again, start a new chat and type **/cincipem-shiftmate**.
 
 If you say "stop" or "bye" in the middle of a task, Claude asks: **Wrap up** (about a minute) or **Close now**. Nothing you've told Claude is lost either way. The skill also closes after an hour with no activity once finishing up has started.
 

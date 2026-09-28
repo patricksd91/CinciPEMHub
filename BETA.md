@@ -1,6 +1,6 @@
 # CinciPEM ShiftMate: beta versions
 
-**Version:** 0.01.08
+**Version:** 0.01.82
 
 Beta versions try out new features before they reach everyone, and they may not work as expected. Each entry lists what changed since the release before it (beta or stable), then any known bugs that are still open. Stable releases are in CHANGELOG.md.
 
@@ -11,6 +11,13 @@ Beta versions try out new features before they reach everyone, and they may not 
 - Needs the ShiftMate desktop extension; hospital-managed computers aren't tested yet.
 - During test mode, other ShiftMate chats on this computer use the test data too.
 - Swap Locations is being redesigned for the next version.
+
+## 0.01.82 — 2026-09-28
+Alpha, for the schedule administrators. (Version numbers now end in two digits; 0.01.82 comes after 0.01.08.)
+- New for administrators: **Schedule Inquiry and Planning**. **Shift Search** finds shifts by date, clinician, site, time, day, shift type and role, on a page beside the chat. **Replace Clinician** shows who could cover a departing clinician's shifts, and why the rest can't be covered. **Coverage Snapshot** shows who's working where. **Enhancement Shifts** lists nice-to-have shifts that could become core coverage. **Moonlighting Offers** lists open shifts to post and who could take them.
+- Start the skill with **/cincipem-shiftmate**.
+- The desktop extension now reaches the schedule, update and feedback sites itself.
+- Setup uses less of your usage limit.
 
 ## 0.01.08 — 2026-09-27
 Alpha: an early preview for a few testers, not for general use.
