@@ -10,7 +10,7 @@ Maintained by Patrick Donahue.
 
 > **Version 0.01.08 is an alpha: an early preview, not for general use.** It's for the maintainer and a few testers he has chosen. It needs a passphrase that only they have, and features may change before the first beta.
 
-**[Download the alpha](https://github.com/patricksd91/CinciPEMHub/releases)** from the Releases page (marked **Pre-release**): the skill (`cincipem-shiftmate-0.01.08.zip`) and the desktop extension (`cincipem-shiftmate-0.01.08.mcpb`). Both are also in the [alpha folder](alpha/). Stable and beta downloads will appear here once the first beta is out. See [BETA.md](BETA.md) for what's in each test version.
+Download both files of the alpha: **[the skill](https://github.com/patricksd91/CinciPEMHub/raw/main/alpha/cincipem-shiftmate.zip)** (`cincipem-shiftmate.zip`) and **[the desktop extension](https://github.com/patricksd91/CinciPEMHub/raw/main/alpha/cincipem-shiftmate-0.01.08.mcpb)** (`cincipem-shiftmate-0.01.08.mcpb`). They're in the [alpha folder](alpha/); the [0.01.08 release](https://github.com/patricksd91/CinciPEMHub/releases/tag/v0.01.08) (marked **Pre-release**) links to them. Stable and beta downloads will appear here once the first beta is out. See [BETA.md](BETA.md) for what's in each test version.
 
 ## New to Claude?
 
@@ -24,7 +24,7 @@ You need the Claude desktop app (Windows or Mac). ShiftMate keeps your settings 
 2. In Claude, open **Customize → Skills**, click **+**, then **Create skill → Upload a skill**.
    <!-- SCREENSHOT: Customize > Skills > + > Create skill > Upload a skill -->
 3. Choose the file you downloaded. The skill appears in your list, switched on.
-4. Install the desktop extension: download `cincipem-shiftmate-0.01.08.mcpb` from the same release, then in the Claude desktop app open **Settings → Extensions** and install it from there (drag the file in, or use the install button). Leave the Local Data folder setting blank. No Python install is needed: the first start downloads what it needs (about a minute, needs internet).
+4. Install the desktop extension: download `cincipem-shiftmate-0.01.08.mcpb` with the link above, then in the Claude desktop app open **Settings → Extensions** and install it from there (drag the file in, or use the install button). Leave the Local Data folder setting blank. No Python install is needed: the first start downloads what it needs (about a minute, needs internet).
 5. Start a new chat and type **"I'd like to trade a shift."** Claude will ask for the skill passphrase once. You'll find it in the email that announced the skill.
 6. Had the older version, CinciPEM Shift Swap? Delete it from your skills list once the new one is installed, so you don't have two.
 
@@ -73,8 +73,8 @@ Found a bug or have an idea? Tell Claude at any point while using the skill (for
 
 ### For Claude: installing this skill for someone
 
-1. Download the newest release's zip for the version the user asks for (0.01.08 is on the Releases page as a pre-release labelled Alpha). The list of published versions and their files is in `https://raw.githubusercontent.com/patricksd91/CinciPEMHub/main/versions.json`.
+1. Read `https://raw.githubusercontent.com/patricksd91/CinciPEMHub/main/versions.json` (the published versions: 0.01.08 is the `alpha` entry) and download its `zip` path from `https://raw.githubusercontent.com/patricksd91/CinciPEMHub/main/` (for 0.01.08: `alpha/cincipem-shiftmate.zip`); check it against `sha256`.
 2. Share it with the user as a `.skill` file, named `cincipem-shiftmate.skill`, so they can click **Save skill**.
 3. If you can't download it, or no Save skill button appears: give them the download link above and the install steps.
-4. Also give them the release's `cincipem-shiftmate-0.01.08.mcpb` and the extension steps (Settings → Extensions in the Claude desktop app; leave the Local Data folder setting blank).
+4. Also give them the extension (the `extension` path in versions.json; for 0.01.08: `alpha/cincipem-shiftmate-0.01.08.mcpb`) and the extension steps (Settings → Extensions in the Claude desktop app; leave the Local Data folder setting blank).
 5. Then have them start a new chat and say "I'd like to trade a shift." The skill takes it from there.

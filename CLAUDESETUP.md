@@ -40,10 +40,10 @@ Open **Settings** (click your name or initials in the bottom-left corner), then:
    - `api.github.com` (so the skill can send your feedback)
    <!-- SCREENSHOT: Additional allowed domains with all three entries -->
    If you'd rather not, the skill still works: you'll attach the schedule file yourself each time, install updates by hand, and email your feedback. During setup, the skill checks that it can reach all three and offers to walk you through adding any that are missing.
-3. **Memory**: make sure **Generate memory from chat history** is on. It's on by default for most accounts. With memory on, you enter the skill passphrase once, and the skill remembers your settings, preferences and blocked dates.
+3. **Memory**: make sure **Generate memory from chat history** is on. It's on by default for most accounts. With memory on, you enter the skill passphrase once. Memory keeps only your passphrase and where your Local Data folder is; your settings, preferences and blocked dates are kept, encrypted, in that folder on your computer.
+   <!-- SCREENSHOT: Memory setting -->
 
 Later, Claude may ask for a few other permissions, such as opening a file you attach or saving an update. The user guide explains each one: see [Claude may ask for permission](USERGUIDE_0.01.08.md#claude-may-ask-for-permission). Claude never asks for your ShiftAdmin username or password.
-   <!-- SCREENSHOT: Memory setting -->
 
 ## 4. Install the skill
 
