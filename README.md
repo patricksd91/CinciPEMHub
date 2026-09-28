@@ -26,7 +26,7 @@ Claude gives you the skill with a **Save skill** button and a link to the deskto
 
 1. Download **[the skill](https://github.com/patricksd91/CinciPEMHub/raw/main/alpha/cincipem-shiftmate.zip)** and **[the desktop extension](https://github.com/patricksd91/CinciPEMHub/raw/main/alpha/cincipem-shiftmate-0.01.82.mcpb)**. Don't unzip them.
 2. Skill: in Claude, open **Customize → Skills**, click **+**, then **Create skill → Upload a skill**, and choose `cincipem-shiftmate.zip`.
-3. Extension: open **Settings → Extensions** and install `cincipem-shiftmate-0.01.82.mcpb` (drag it in). If an older ShiftMate extension is listed, uninstall it first. Leave the Local Data folder setting blank.
+3. Extension: open **Settings → Extensions -> Advanced -> Install** and install `cincipem-shiftmate-0.01.82.mcpb` (drag it in). If an older ShiftMate extension is listed, uninstall it first. Leave the Local Data folder setting blank.
 4. If you have the old CinciPEM Shift Swap skill, delete it.
 
 ## Start
