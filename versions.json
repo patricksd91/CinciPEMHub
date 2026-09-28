@@ -1,0 +1,10 @@
+{
+ "alpha": {
+  "version": "0.01.08",
+  "date": "2026-09-27",
+  "zip": "alpha/cincipem-shiftmate.zip",
+  "sha256": "05e01bca7a71b1b9eec74f0f18c63b457455f07c6a30e7c66795ea94ed9f06aa",
+  "extension": "alpha/cincipem-shiftmate-0.01.08.mcpb",
+  "extension_sha256": "c8fc8de0d71adfabcd71419d4cbec8cc6a18454c11fb859ece5d7398d65c8655"
+ }
+}
