@@ -181,7 +181,7 @@ If you say "stop" or "bye" in the middle of a task, Claude asks: **Wrap up** (ab
 
 When a new version is out, Claude tells you when you start the skill, shows what changed, and offers **Update now** or **Not now**. Update now gives you a **Save skill** button; click it and you're done. Not now means Claude won't ask again for a day. You can also say **"check for updates"** any time.
 
-Versions ending in .00 (like 0.02.00) are stable releases, and the others are betas. An alpha, like this version, is an early preview before a beta. If the automatic update can't connect, Claude walks you through downloading the new version from the [download page](README.md#download) and uploading it.
+Versions ending in .00 (like 0.02.00) are stable releases, and the others are betas. An alpha, like this version, is an early preview before a beta. If the automatic update can't connect, Claude walks you through downloading the new version from the [download page](README.md#install) and uploading it.
 
 ## Beta program
 
@@ -234,7 +234,7 @@ During setup you choose how much guidance you'd like: **Walk me through everythi
 | The page beside the chat didn't open | Say so; Claude asks the same questions in the chat |
 | Nothing happens after pressing Save on a page | Save copies one line. Click in the chat box, paste (Ctrl+V on Windows, ⌘V on a Mac) and send it |
 | Swap Locations or Pickup Moonlighting isn't offered | They're for beta and alpha testers in this version. Say "join the beta" if you'd like to try them |
-| Updates never show up | Add `raw.githubusercontent.com` to allowed websites, or check the [download page](README.md#download) |
+| Updates never show up | Add `raw.githubusercontent.com` to allowed websites, or check the [download page](README.md#install) |
 | Feedback can't be sent automatically | Add `api.github.com` to allowed websites, or download the feedback file and email it |
 | Clicking Open in Outlook doesn't open your browser | Right-click it, choose Copy link, and paste it into your browser's address bar |
 | Something looks wrong | Say so in the chat. Claude will try to fix it and note it as feedback |

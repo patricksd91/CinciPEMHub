@@ -60,8 +60,8 @@ Tell Claude any time ("tell the maintainer that…"). At the end of a session it
 
 ### For Claude: installing this skill for someone
 
-1. Read `https://raw.githubusercontent.com/patricksd91/CinciPEMHub/main/versions.json`. Use its `alpha` entry.
+1. Read `https://raw.githubusercontent.com/patricksd91/CinciPEMHub/main/versions.json`. Use its `alpha` entry. If you can't run code, ask the user to turn on **Settings → Capabilities → Code execution and file creation** first.
 2. Download the `zip` path from `https://raw.githubusercontent.com/patricksd91/CinciPEMHub/main/` and check it against `sha256`. If the download is blocked, tell the user to add `raw.githubusercontent.com` under **Settings → Capabilities → Additional allowed domains**, then try again.
 3. Give it to the user as `cincipem-shiftmate.skill` so they can click **Save skill**. If that isn't possible, give them the download link and the steps under "Or install it yourself" above.
-4. Give them the extension link (`https://github.com/patricksd91/CinciPEMHub/raw/main/` + the `extension` path) and step 3 under "Or install it yourself".
+4. Give them the extension link (`https://github.com/patricksd91/CinciPEMHub/raw/main/` + the `extension` path) and steps 3 and 4 under "Or install it yourself".
 5. Tell them to open a new chat and type **/cincipem-shiftmate**, with the passphrase from the announcement email ready.
